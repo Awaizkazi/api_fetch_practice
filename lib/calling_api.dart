@@ -32,18 +32,32 @@ class _CallingApiState extends State<CallingApi> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Card(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-          color: Colors.greenAccent,
-          child: ListView.builder(itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(
+        color: Colors.amberAccent,
+        margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        child: ListView.builder(itemBuilder: (context, index) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                data[index]['userId'].toString(),
+                maxLines: 2,
+              ),
+              Text(
+                data[index]['id'].toString(),
+                maxLines: 2,
+              ),
+              Text(
+                data[index]['title'].toString(),
+                maxLines: 2,
+              ),
+              Text(
                 data[index]['body'],
                 maxLines: 2,
               ),
-            );
-          }),
-        ),
+            ],
+          );
+        }),
       ),
     );
   }
