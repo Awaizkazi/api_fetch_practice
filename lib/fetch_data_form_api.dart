@@ -41,21 +41,21 @@ class _FetchDataFromApiState extends State<FetchDataFromApi> {
     );
   }
 
-  Future<List<SamplePosts>> getData() async {
-    final response = await http.get(
-      Uri.parse('https://jsonplaceholder.typicode.com/posts'),
-    );
-    var data = jsonDecode(response.body.toString());
+  // Future<List<SamplePosts>> getData() async {
+  //   final response = await http.get(
+  //     Uri.parse('https://jsonplaceholder.typicode.com/posts'),
+  //   );
+  //   var data = jsonDecode(response.body.toString());
 
-    if (response.statusCode == 200) {
-      for (Map<String, dynamic> index in data) {
-        samplePosts.add(
-          SamplePosts.fromJson(index),
-        );
-      }
-      return samplePosts;
-    } else {
-      samplePosts;
-    }
-  }
+  //   if (response.statusCode == 200) {
+  //     for (Map<String, dynamic> index in data) {
+  //       samplePosts.add(
+  //         SamplePosts.fromJson(index),
+  //       );
+  //     }
+  //     return samplePosts;
+  //   } else {
+  //     samplePosts;
+  //   }
+  // }
 }

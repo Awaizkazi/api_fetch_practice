@@ -1,3 +1,4 @@
+import 'package:api_fetch_practice/calling_api.dart';
 import 'package:api_fetch_practice/fetch_data_form_api.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(centerTitle: true),
-        body: const FetchDataFromApi(),
+        body: CallingApi(),
       ),
     );
   }
